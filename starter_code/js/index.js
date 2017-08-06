@@ -4,10 +4,15 @@ $(document).ready(function(){
 
 	function main (){
 		var city = cityInput();
+		console.log(city);
 		event.preventDefault();
 		backgroundImage(city);
+		// resetForm(cityInput);
 	}
-	// console.log(city);
+
+	// function resetForm(cityInput){
+	// 	$("form").reset(cityInput);		
+	// }
 
 	function cityInput(){
 // user inputs city into #city-type field + click #submit-btn OR hits return === .submit()		
@@ -38,8 +43,8 @@ $(document).ready(function(){
 		else if (city == "Sydney" || city == "SYD"){
 			$("body").attr("class", "sydney");			
 		} 
-		else {
-			$("body").css("body", "background");
+		else {	// this one is not working						
+			$("body").attr("class", "body"); 
 		}
 	}	
 
